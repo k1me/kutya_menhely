@@ -115,14 +115,31 @@ aside {
 }
 @media screen and (max-width: 800px) {
     section, aside {
+        overflow: hidden;
         margin: 10px;
     }
 }
-/*
-@media screen and (max-width: 800px) {
-    section, aside {
-        margin: 5px;
-    }
-}
-*/
 /*eddig tart a section és aside formázása*/
+
+.footer-conainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #c7e4ff;
+    border-radius: 10px 10px 0 0;
+}
+footer p {
+    color: #192129;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px;
+}
