@@ -4,12 +4,12 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #192129;
-    color: #c7e4ff;
+    color: #192129;
 } 
 header {
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     background-color: #c7e4ff;
     text-align: center;
 }
@@ -17,7 +17,7 @@ header h1 {
     font-size: 60px;
     color: #192129;
     text-transform: uppercase;
-    margin: 10px;
+    margin: 0 0 10px 0;
 }
 nav {
     position: sticky;
@@ -30,6 +30,8 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #8db8e0;
+    border-radius: 10px;
+    margin: 0 10px;
 }
 ul li {
     float: left;
@@ -59,3 +61,68 @@ ul li.login {
 header, section, aside, footer, nav, ul, li, a {
     display: block;
 }
+/*eddig tart a navbar formázása*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+}
+.section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width:calc(100%-350px);
+}
+section {
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    background-color: #8db8e0;
+    border-radius: 10px;
+}
+.aside-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 350px;
+}
+aside {
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    background-color: #8db8e0;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .flex-container {
+        flex-direction: column !important;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .section-container, .aside-container {
+        flex-direction: column !important;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    section, aside {
+        margin: 10px;
+    }
+}
+/*
+@media screen and (max-width: 800px) {
+    section, aside {
+        margin: 5px;
+    }
+}
+*/
+/*eddig tart a section és aside formázása*/
