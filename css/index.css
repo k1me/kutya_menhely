@@ -82,6 +82,7 @@ header, section, aside, footer, nav, ul, li, a {
     
 }
 section {
+    max-width: 1150px;
     float: left;
     margin: 10px 10px 0px 10px;
     padding: 10px;
@@ -160,12 +161,14 @@ footer p {
     justify-content: flex-start;
     flex-direction: column;
     margin-left: 5px;
+    padding-left: 10px;
 }
 .kutya-nev {
     height: 25px;
     font-weight: bold;
     color: #192129;
     text-transform: capitalize;
+    font-style: italic;
 }
 .kutya-fajta {
     height: 25px;
@@ -183,16 +186,11 @@ footer p {
     color: #192129;
     text-transform: uppercase;
     border-right: 1px solid #192129;
-}
-.nem p {
     padding-right: 5px;
 }
 .kor {
     color: #192129;
     text-transform: uppercase;
-
-}
-.kor p {
     padding-left: 5px;
 }
 .behuz li {
