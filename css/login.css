@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #192129;
+    color: #192130;
+} 
+header {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    background-color: #c7e4ff;
+    text-align: center;
+}
+header h1 {
+    font-size: 60px;
+    color: #192129;
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
+    padding: 5px;
+    
+}
+div .section-container > h2 {
+    font-size: 40px;
+    color: #8db8e0;
+    text-transform: capitalize;
+    margin: 10px 10px 0 10px;
+    padding: 90px 0 0 0;
+}
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8db8e0;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: 3px solid #192129;
+    border-radius: 10px;
+}
+ul li {
+    float: left;
+}
+ul li a {
+    display: block;
+    color: #192129;
+    text-align: center;
+    padding: 13px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+ul li a:hover {
+    border-radius: 10px;
+    background-color: #133555;
+    color: white;
+}
+ul li.login {
+    float: right;
+}
+@media screen and (max-width: 720px) {
+    ul li.right, 
+    ul li {float: none !important;} 
+  }
+
+header, section, aside, footer, nav, ul, li, a {
+    display: block;
+}
+.footer-conainer {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    height: 30px;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #c7e4ff;
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    bottom: 0; 
+}
+footer p {
+    color: #192129;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px;
+}
+/*eddig ez a header & footer formázása*/
+.form-wrapper {
+    display: flex;
+    border-radius: 5px;
+    padding: 10px 10px 45px 10px;
+    justify-content: center;
+    text-align: center;
+}
+#login_h {
+    font-size: 30px;
+    color: #192129;
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
+    padding: 2px;
+}
+form {
+    max-width: 300px;
+    background-color: #c7e4ff;
+    border-radius: 10px;
+    padding: 20px;
+}
+.un-psw-wrapper {
+    padding-left: 20px;
+}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 10px 10px;
+    margin: 8px;
+    border: none;
+    border-radius: 10px;
+    display: block;
+}
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #9dd0ff;
+    color: black;
+}
+button {
+    background-color: #133555;
+    border-radius: 10px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+
+}
+form a {
+    color: #192129;
+    text-decoration: none;
+} 
+form a:hover {
+    color: #e97171;
+}

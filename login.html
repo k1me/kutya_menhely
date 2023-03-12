@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kutya Menhely</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <header>
-        <h1>Kutya Menhely</h1>
+        <h1>új kezdet kutya menhely</h1>
     </header>
     <nav>
         <ul>
@@ -20,9 +20,21 @@
             <li class="login"><a href="login.html">Belépés</a></li>
         </ul>
     </nav>
+    <div class="form-wrapper">
+        <form method="POST">
+                <h2 id="login_h">belépés</h2>
+                <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
+                <div un-psw-wrapper>
+                    <input type="text" name="uname" placeholder="Felhasználónév">
+                    <input type="password" name="passwd" placeholder="Jelszó" required/>
+                </div>
+                <button type="submit">Belépés</button>
+                    <a href="register.html">regisztráció</a>
+            </form>
+        </div>
     <div class="footer-container">
         <footer>
-            <p>© 2023 Kutya Menhely</p>
+            <p>© 2023 Új Kezdet Kutya Menhely</p>
         </footer>
     </div>
 </body>
