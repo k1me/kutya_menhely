@@ -1,10 +1,9 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #192129;
-    color: #192129;
+    color: #192130;
 } 
 header {
     height: 100%;
@@ -16,15 +15,24 @@ header {
 header h1 {
     font-size: 60px;
     color: #192129;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 0 0 10px 0;
+    padding: 5px;
+    
+}
+div .section-container > h2 {
+    font-size: 40px;
+    color: #8db8e0;
+    text-transform: capitalize;
+    margin: 10px 10px 0 10px;
+    padding: 90px 0 0 0;
 }
 nav {
     position: sticky;
     top: 0;
     width: 100%;
 }
-nav ul {
+nav > ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -32,6 +40,8 @@ nav ul {
     background-color: #8db8e0;
     border-radius: 10px;
     margin: 0 10px;
+    border: 3px solid #192129;
+    border-radius: 10px;
 }
 ul li {
     float: left;
@@ -40,7 +50,7 @@ ul li a {
     display: block;
     color: #192129;
     text-align: center;
-    padding: 14px 16px;
+    padding: 13px 20px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -64,38 +74,28 @@ header, section, aside, footer, nav, ul, li, a {
 /*eddig tart a navbar formázása*/
 .flex-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    align-content: center;
-    width: 100%;
 }
 .section-container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-    width:calc(100%-350px);
+    
 }
 section {
     float: left;
-    margin: 10px;
-    padding: 5px;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
     background-color: #8db8e0;
     border-radius: 10px;
 }
 .aside-container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: center;
-    width: 350px;
+    
 }
 aside {
-    float: right;
-    margin: 10px;
+    width: 350px;
+    float: left;
+    margin: 10px 10px 10px 0;
     padding: 5px;
     background-color: #8db8e0;
     border-radius: 10px;
@@ -142,4 +142,60 @@ footer p {
     font-size: 12px;
     margin: 0;
     padding: 10px;
+}
+/*eddig tarta a footer*/
+.img-wrapper {
+    width: 100%;
+    line-height: 0;
+    border-bottom: 1px solid #192129;
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+}
+.kutya-img {
+    float: left;
+    border-radius: 40px;
+}
+.img-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.kutya-nev {
+    height: 25px;
+    font-weight: bold;
+    color: #192129;
+    text-transform: capitalize;
+}
+.kutya-fajta {
+    height: 25px;
+    color: #192129;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.nem-kor-wrapper {
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+}
+.nem {
+    color: #192129;
+    text-transform: uppercase;
+    border-right: 1px solid #192129;
+}
+.nem p {
+    padding-right: 5px;
+}
+.kor {
+    color: #192129;
+    text-transform: uppercase;
+
+}
+.kor p {
+    padding-left: 5px;
+}
+.behuz li {
+    list-style-type: disc;
+    margin: 5px;
 }
