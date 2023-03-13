@@ -1,77 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #192129;
-    color: #192130;
-} 
-header {
-    height: 100%;
-    width: 100%;
-    border-radius: 0 0 10px 10px;
-    background-color: #c7e4ff;
-    text-align: center;
-}
-header h1 {
-    font-size: 60px;
-    color: #192129;
-    text-transform: capitalize;
-    margin: 0 0 10px 0;
-    padding: 5px;
-    
-}
-div .section-container > h2 {
-    font-size: 40px;
-    color: #8db8e0;
-    text-transform: capitalize;
-    margin: 10px 10px 0 10px;
-    padding: 90px 0 0 0;
-}
-nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-nav > ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #8db8e0;
-    border-radius: 10px;
-    margin: 0 10px;
-    border: 3px solid #192129;
-    border-radius: 10px;
-}
-ul li {
-    float: left;
-}
-ul li a {
-    display: block;
-    color: #192129;
-    text-align: center;
-    padding: 13px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-ul li a:hover {
-    border-radius: 10px;
-    background-color: #133555;
-    color: white;
-}
-ul li.login {
-    float: right;
-}
-@media screen and (max-width: 720px) {
-    ul li.right, 
-    ul li {float: none !important;} 
-  }
-
-header, section, aside, footer, nav, ul, li, a {
-    display: block;
-}
-.footer-conainer {
+.footer-container {
     display: flex;
     align-content: center;
     width: 100%;
@@ -91,7 +18,7 @@ footer p {
     margin: 0;
     padding: 10px;
 }
-/*eddig ez a header & footer formázása*/
+/*footer formázása*/
 .form-wrapper {
     display: flex;
     border-radius: 5px;
