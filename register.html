@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Új Kezdet Kutya Menhely</title>
     <link rel="stylesheet" href="css/kozos.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <header>
@@ -21,6 +22,14 @@
     </nav>
     <div class="form-wrapper">
         <form method="POST">
+            <h2 id="login_h">regisztráció</h2>
+            <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
+            <div un-psw-wrapper>
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="uname" placeholder="Felhasználónév">
+                <input type="password" name="passwd" placeholder="Jelszó" required/>
+            </div>
+            <button type="submit">Regisztráció</button>
         </form>
     </div>
     <div class="footer-container">
