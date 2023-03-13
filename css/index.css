@@ -1,3 +1,10 @@
+div .section-container > h2 {
+    font-size: 40px;
+    color: #8db8e0;
+    text-transform: capitalize;
+    margin: 10px 10px 0 10px;
+    padding: 90px 0 0 0;
+}
 .flex-container {
     display: flex;
     justify-content: center;
