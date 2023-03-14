@@ -6,7 +6,7 @@ window.onscroll = function() {
     } else {
         document.getElementById("navbar").style.top = "-50px";
     }
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 800) {
         if (elozoScrollPozicio > jelenlegiScrollPozicio) {
             document.getElementById("navbar").style.top = "0";
         } else {
