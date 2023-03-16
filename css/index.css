@@ -106,4 +106,10 @@ aside {
     list-style-type: disc;
     margin: 5px;
 }
+.kuglof{
+    border: 1px solid #BAC4AB;
+    margin: 5px 5px 5px 5px;
+    display: inline-block;
+    float: left;
+}
 /*eddig tart a kutya infók formázása*/
