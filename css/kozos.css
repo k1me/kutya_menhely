@@ -25,15 +25,16 @@ header h1 {
 }
 #navbar {
     transition: top 0.2s;
+    z-index: 100;
 }
 nav {
     position: sticky;
     top: 0;
     width: 100%;
+    border-radius: 20px
 }
 nav > ul {
     list-style: none;
-    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #8db8e0;
