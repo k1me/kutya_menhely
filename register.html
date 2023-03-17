@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/kozos.css">
     <link rel="stylesheet" href="css/register.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <script type="text/javascript" src="js/on_scroll_hide.js""></script>
+    <script type="text/javascript" src="js/on_scroll_hide.js"></script>
 </head>
 <body>
     <header>
@@ -28,11 +28,16 @@
             <h2 id="login_h">regisztráció</h2>
             <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
             <div un-psw-wrapper>
-                <input type="email" name="email" placeholder="E-mail">
+                <input type="text" name="full-name" placeholder="Teljes név">
                 <input type="text" name="uname" placeholder="Felhasználónév">
+                <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="passwd" placeholder="Jelszó" required/>
+                <input type="password" name="passwd-check" placeholder="Jelszó ismét" required/>
+                <label>Születési dátum: <input type="date" name="date-of-birth" min="1920-01-01"/></label> <br/>
+
             </div>
             <button type="submit">Regisztráció</button>
+            <button type="reset" >Adatok törlése</button>
         </form>
     </div>
     <div class="footer-container">
