@@ -5,22 +5,33 @@ div .section-container > h2 {
     margin: 10px 10px 0 10px;
     padding: 90px 0 0 0;
 }
+.body-container {
+    display: flex;
+    max-width: 1500px;
+    padding: 5px;
+}
 .flex-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 .section-container {
+    display: flex;
     flex-direction: column;
     
 }
 section {
     max-width: 1150px;
     float: left;
-    margin: 10px 10px 0px 10px;
+    margin: 0 10px 10px 10px;
     padding: 10px;
     background-color: #8db8e0;
     border-radius: 10px;
+}
+section ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
 }
 .aside-container {
     flex-direction: column;
@@ -29,8 +40,8 @@ section {
 aside {
     width: 350px;
     float: left;
-    margin: 10px 10px 10px 0;
-    padding: 5px;
+    margin: 0 10px 10px 0;
+    padding: 10px;
     background-color: #8db8e0;
     border-radius: 10px;
 }
@@ -64,6 +75,7 @@ aside {
 .kutya-img {
     float: left;
     border-radius: 40px;
+    border: 2px solid #192129;
 }
 .img-info {
     display: flex;
@@ -102,14 +114,25 @@ aside {
     text-transform: uppercase;
     padding-left: 5px;
 }
-.behuz li {
+.behuz li{
+    padding: 0 0 0 30px;
     list-style-type: disc;
     margin: 5px;
 }
-.kuglof{
-    border: 1px solid #BAC4AB;
-    margin: 5px 5px 5px 5px;
-    display: inline-block;
-    float: left;
+.kuglof-wrapper{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
 }
-/*eddig tart a kutya infók formázása*/
+.kuglof-img {
+    max-width: 250px;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    margin: 5px;
+}
+
