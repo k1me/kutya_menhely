@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Új Kezdet Kutya Menhely</title>
     <link rel="stylesheet" href="css/kozos.css">
+    <link rel="stylesheet" href="css/ajanlo.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <script type="text/javascript" src="js/on_scroll_hide.js""></script>
 </head>
@@ -22,6 +23,244 @@
             <li class="login"><a href="login.html">Belépés</a></li>
         </ul>
     </nav>
+    <div class="kerdoiv-container">
+        <form class="kerdoiv" action="">
+            <h2>Milyen kutya illik hozzád?</h2>
+            <div class="fieldset-container">
+                <fieldset>
+                    <legend>Kutya mérete</legend>
+                    <div class="valasz">
+                        <input type="radio" name="meret">
+                        <label for="meret">Óriás vagy nagytestű</label>
+                    </div>
+                    
+                    <div class="valasz">
+                        <input type="radio" name="meret">
+                        <label for="meret">Közepes méretű</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="meret">
+                        <label for="meret">Kistestű</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="meret">
+                        <label for="meret">Nem számít</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Szőrtípus</legend>
+                    <div class="valasz">
+                        <input type="radio" name="szor">
+                        <label for="szor">Hosszú vagy félhosszú</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="szor">
+                        <label for="szor">Normál hossz</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="szor">
+                        <label for="szor">Rövid</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="szor">
+                        <label for="szor">Kopasz</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="szor">
+                        <label for="szor">Nem számít</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Testfelépítés</legend>
+                    <div class="valasz">
+                        <input type="radio" name="test">
+                        <label for="test">Erős csontozatú</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="test">
+                        <label for="test">Átlagos, normál testalkat</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="test">
+                        <label for="test">Vékony</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="test">
+                        <label for="test">Nem számít</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Mozgásigény</legend>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Magas mozgásigény</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Közepes mozgásigény</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Legyen lusta</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Nem tudom</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Gyerekbarát</legend>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Türelmes</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Közepesen türelmes</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Nem kell türelmesnek lennie/label</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="mozg">
+                        <label for="mozg">Nem számít</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Ráfordított idő</legend>
+                    <div class="valasz">
+                        <input type="radio" name="ido">
+                        <label for="ido">Nagyon sok</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="ido">
+                        <label for="ido">Napi 1-2 óra</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="ido">
+                        <label for="ido">Nem túl sok</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="ido">
+                        <label for="ido">Nem tudom</label>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+    <div class="tapajanlo">
+        <div class="table-wrapper">
+            <h2>Mennyit egyen a kutyád?</h2>
+            <table>
+                <tr>
+                    <th colspan="7">Ajánlott napi mennyiség grammban</th>
+                </tr>
+                <tr>
+                    <th colspan="1" rowspan="2">Kor hónapban</th>
+                    <th colspan="6">Kutya súlya</th>
+                </tr>
+                <tr>
+                    <th>25 kg</th>
+                    <th>30 kg</th>
+                    <th>35 kg</th>
+                    <th>40 kg</th>
+                    <th>50 kg</th>
+                    <th>50-70 kg</th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th>230</th>
+                    <th>250</th>
+                    <th>270</th>
+                    <th>290</th>
+                    <th>320</th>
+                    <th>320-350</th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th>310</th>
+                    <th>340</th>
+                    <th>380</th>
+                    <th>420</th>
+                    <th>460</th>
+                    <th>460-600</th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th>350</th>
+                    <th>390</th>
+                    <th>430</th>
+                    <th>465</th>
+                    <th>545</th>
+                    <th>545-620</th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th>400</th>
+                    <th>450</th>
+                    <th>520</th>
+                    <th>560</th>
+                    <th>590</th>
+                    <th>590-720</th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <th>435</th>
+                    <th>490</th>
+                    <th>540</th>
+                    <th>590</th>
+                    <th>665</th>
+                    <th>665-900</th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <th>415</th>
+                    <th>470</th>
+                    <th>500</th>
+                    <th>550</th>
+                    <th>635</th>
+                    <th>635-900</th>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <th>400</th>
+                    <th>455</th>
+                    <th>485</th>
+                    <th>535</th>
+                    <th>595</th>
+                    <th>595-880</th>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th>365</th>
+                    <th>420</th>
+                    <th>480</th>
+                    <th>530</th>
+                    <th>580</th>
+                    <th>580-810</th>
+                </tr>
+                <tr>
+                    <th>18</th>
+                    <th>365</th>
+                    <th>420</th>
+                    <th>480</th>
+                    <th>530</th>
+                    <th>580</th>
+                    <th>580-810</th>
+                </tr>
+                <tr>
+                    <th>24</th>
+                    <th>350</th>
+                    <th>395</th>
+                    <th>450</th>
+                    <th>460</th>
+                    <th>490</th>
+                    <th>490-710</th>
+                </tr>
+            </table>
+        </div>
+    </div>
     <div class="footer-container">
         <footer>
             <p>© 2023 Új Kezdet Kutya Menhely</p>

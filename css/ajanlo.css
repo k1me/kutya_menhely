@@ -1,0 +1,78 @@
+.kerdoiv-container {
+  display: flex;
+  max-width: 100%;
+  padding: 10px;
+}
+.kerdoiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.kerdoiv h2 {
+  color: #c7e4ff;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+}
+.fieldset-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1500px;
+  background-color: #c7e4ff;
+  border-radius: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.kerdoiv fieldset {
+  width: 250px;
+  height: auto;
+  border: 2px solid #192129;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 10px;
+}
+.valasz {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.valasz * {
+  margin: 5px;
+}
+.tapajanlo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px;
+}
+.table-wrapper h2 {
+  color: #c7e4ff;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 0 20px 0;
+}
+table {
+  background-color: #c7e4ff;
+  border-radius: 10px;
+  border: #192129;
+  max-width: 100%;
+  padding: 10px
+}
+th, td {
+  border: 1px solid #192129;
+  border-radius: 2px;
+  padding: 5px;
+}
+table td {
+  border: 1px solid #192129;
+  padding: 5px;
+}
+
