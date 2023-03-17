@@ -1,15 +1,23 @@
 
 
 .div-container {
-    max-width: 1200px;
+    max-width: 700px;
     float: inherit;
-    margin: 10px 300px 10px 300px;
-    padding: 10px;
+    margin: 10px 400px 10px 400px;
+    padding: 20px;
     background-color: #8db8e0;
     border-radius: 10px;
     text-align: center;
-    flex-direction: column;
+    flex-direction: inherit;
 
+}
+img {
+
+    border-radius: 10px;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
 }
 
 
