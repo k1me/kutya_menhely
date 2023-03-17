@@ -136,3 +136,15 @@ aside {
     margin: 5px;
 }
 
+.video {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+
+}
+
