@@ -27,6 +27,7 @@ section {
     padding: 10px;
     background-color: #8db8e0;
     border-radius: 10px;
+    text-align: justify;
 }
 section ul {
     list-style-type: disc;
