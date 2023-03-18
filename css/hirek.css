@@ -15,7 +15,9 @@ section {
     padding: 10px;
     background-color: #8db8e0;
     border-radius: 10px;
-
+}
+.igazit{
+    text-align: right;
 }
 
 @media screen and (max-width: 800px) {
@@ -54,6 +56,105 @@ img {
     width: 40.33%;
     padding: 15px;
     margin: auto;
+}
+.column-tuzijatek{
+    background-image: url('/kutya_menhely/img/tuzijatek.jpg');
+    margin: auto;
+    margin-left: 600px;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    background-size: 100% 100%;
+    max-width: 500px;
+    max-height: 300px;
+    justify-content: right;
+    flex-direction: column;
+}
+.column-seta{
+    background-image: url('/kutya_menhely/img/seta.jpg');
+    margin: auto;
+    margin-left: 600px;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    background-size: 100% 100%;
+    max-width: 500px;
+    max-height: 300px;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.column-ivartalanitas{
+    background-image: url('/kutya_menhely/img/ivartalanitas.jpg');
+    margin: auto;
+    margin-left: 600px;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    background-size: 100% 100%;
+    max-width: 500px;
+    max-height: 300px;
+    justify-content: right;
+    flex-direction: column;
+}
+.column-gyujtesbovitesre{
+    margin: auto;
+    background-image: url('/kutya_menhely/img/gyujtesbovitesre.png');
+    margin-left: 600px;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    background-size: 100% 100%;
+    max-width: 500px;
+    max-height: 300px;
+    justify-content: right;
+    flex-direction: column;
+}
+.column-gondozotkeresunk{
+    margin: auto;
+    background-image: url('/kutya_menhely/img/gondozotkeresunk.jpg');
+    margin-left: 600px;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    background-size: 100% 100%;
+    max-width: 500px;
+    max-height: 250px;
+    justify-content: right;
+    flex-direction: column;
+}
+.column-etelgyujtes{
+    margin: auto;
+    background-image: url('/kutya_menhely/img/etelgyujtes.jpg');
+    margin-left: 600px;
+    background-size: cover;
+    background-position: right;
+    border-radius: 10px;
+    border-color: #192129;
+    border-style: solid;
+    border-width: 3px;
+    background-size: 100% 100%;
+    max-width: 500px;
+    max-height: 300px;
+    justify-content: right;
+    flex-direction: column;
 }
 
 
