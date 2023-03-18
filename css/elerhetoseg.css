@@ -27,7 +27,7 @@
 
 .div-background {
     margin: auto;
-    background-image: url('/kutya_menhely/img/adoszazalek.jpg');
+    background-image: url("/kutya_menhely/img/adoszazalek.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 10px;
