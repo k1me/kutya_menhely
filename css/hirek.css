@@ -57,3 +57,7 @@ img {
     display: flex;
     align-self: flex-end;
 }
+#kulonc{
+    display: flex;
+    flex-direction: column; 
+}
