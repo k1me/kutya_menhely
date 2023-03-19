@@ -6,8 +6,8 @@
     <title>Új Kezdet Kutya Menhely</title>
     <link rel="stylesheet" href="css/kozos.css">
     <link rel="stylesheet" href="css/ajanlo.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <script type="text/javascript" src="js/on_scroll_hide.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="js/on_scroll_hide.js"></script>
 </head>
 <body>
     <header>
@@ -24,126 +24,125 @@
         </ul>
     </nav>
     <div class="kerdoiv-container">
-        <form class="kerdoiv" action="">
+        <form class="kerdoiv">
             <h2>Milyen kutya illik hozzád?</h2>
             <div class="fieldset-container">
-                <fieldset>
+                <fieldset id="meret">
                     <legend>Kutya mérete</legend>
                     <div class="valasz">
                         <input type="radio" name="meret">
-                        <label for="meret">Óriás vagy nagytestű</label>
-                    </div>
-                    
-                    <div class="valasz">
-                        <input type="radio" name="meret">
-                        <label for="meret">Közepes méretű</label>
+                        <label>Óriás vagy nagytestű</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="meret">
-                        <label for="meret">Kistestű</label>
+                        <label>Közepes méretű</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="meret">
-                        <label for="meret">Nem számít</label>
+                        <label>Kistestű</label>
+                    </div>
+                    <div class="valasz">
+                        <input type="radio" name="meret">
+                        <label>Nem számít</label>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="szor">
                     <legend>Szőrtípus</legend>
                     <div class="valasz">
                         <input type="radio" name="szor">
-                        <label for="szor">Hosszú vagy félhosszú</label>
+                        <label>Hosszú vagy félhosszú</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="szor">
-                        <label for="szor">Normál hossz</label>
+                        <label>Normál hossz</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="szor">
-                        <label for="szor">Rövid</label>
+                        <label>Rövid</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="szor">
-                        <label for="szor">Kopasz</label>
+                        <label>Kopasz</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="szor">
-                        <label for="szor">Nem számít</label>
+                        <label>Nem számít</label>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="test">
                     <legend>Testfelépítés</legend>
                     <div class="valasz">
                         <input type="radio" name="test">
-                        <label for="test">Erős csontozatú</label>
+                        <label>Erős csontozatú</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="test">
-                        <label for="test">Átlagos, normál testalkat</label>
+                        <label>Átlagos, normál testalkat</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="test">
-                        <label for="test">Vékony</label>
+                        <label>Vékony</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="test">
-                        <label for="test">Nem számít</label>
+                        <label>Nem számít</label>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="mozg">
                     <legend>Mozgásigény</legend>
                     <div class="valasz">
                         <input type="radio" name="mozg">
-                        <label for="mozg">Magas mozgásigény</label>
+                        <label>Magas mozgásigény</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="mozg">
-                        <label for="mozg">Közepes mozgásigény</label>
+                        <label>Közepes mozgásigény</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="mozg">
-                        <label for="mozg">Legyen lusta</label>
+                        <label>Legyen lusta</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="mozg">
-                        <label for="mozg">Nem tudom</label>
+                        <label>Nem tudom</label>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="turelemes">
                     <legend>Gyerekbarát</legend>
                     <div class="valasz">
-                        <input type="radio" name="mozg">
-                        <label for="mozg">Türelmes</label>
+                        <input type="radio" name="turelem">
+                        <label>Türelmes</label>
                     </div>
                     <div class="valasz">
-                        <input type="radio" name="mozg">
-                        <label for="mozg">Közepesen türelmes</label>
+                        <input type="radio" name="turelem">
+                        <label>Közepesen türelmes</label>
                     </div>
                     <div class="valasz">
-                        <input type="radio" name="mozg">
-                        <label for="mozg">Nem kell türelmesnek lennie</label>
+                        <input type="radio" name="turelem">
+                        <label>Nem kell türelmesnek lennie</label>
                     </div>
                     <div class="valasz">
-                        <input type="radio" name="mozg">
-                        <label for="mozg">Nem számít</label>
+                        <input type="radio" name="turelem">
+                        <label>Nem számít</label>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="ido">
                     <legend>Ráfordított idő</legend>
                     <div class="valasz">
                         <input type="radio" name="ido">
-                        <label for="ido">Nagyon sok</label>
+                        <label>Nagyon sok</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="ido">
-                        <label for="ido">Napi 1-2 óra</label>
+                        <label>Napi 1-2 óra</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="ido">
-                        <label for="ido">Nem túl sok</label>
+                        <label>Nem túl sok</label>
                     </div>
                     <div class="valasz">
                         <input type="radio" name="ido">
-                        <label for="ido">Nem tudom</label>
+                        <label>Nem tudom</label>
                     </div>
                 </fieldset>
             </div>
@@ -233,7 +232,7 @@
                     <td>485</td>
                     <td>535</td>
                     <td>595</td>
-                    <td>595-880</th>
+                    <td>595-880</td>
                 </tr>
                 <tr>
                     <td>12</td>
