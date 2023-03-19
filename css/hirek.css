@@ -1,165 +1,59 @@
-
 .section-container {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    background:  #192129;
-
-
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
 }
-section {
-    max-width: 1200px;
-    float: inherit;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: 10px;
-    padding: 10px;
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: center;
     background-color: #8db8e0;
     border-radius: 10px;
-    margin: 10px
-}
-.igazit{
-    text-align: right;
-}
-
-@media screen and (max-width: 800px) {
-    .section-container, .aside-container {
-        flex-direction: column !important;
-        width: 100%;
-    }
+    padding: 10px;
+    margin: 10px 10px 0 10px;
+    max-width: 1500px;
 }
 @media screen and (max-width: 800px) {
-    section, aside {
-        overflow: hidden;
-        margin: 10px;
+    .wrapper {
+        flex-direction: column;
     }
 }
-
-img {
-
-    margin: auto;
-    border-radius: 10px;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    flex-wrap: wrap;
+.txt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-
 }
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+.txt-container  h2 {
+    font-weight: bold;
 }
-.column {
-    float: left;
-    width: 40.33%;
-    padding: 15px;
-    margin: auto;
-}
-.column-tuzijatek{
-    background-image: url("../img/tuzijatek.jpg");
-    margin: auto;
-    margin-left: 600px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 10px;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    background-size: 100% 100%;
-    max-width: 500px;
-    max-height: 300px;
-    justify-content: right;
-    flex-direction: column;
-}
-.column-seta{
-    background-image: url("../img/seta.jpg");
-    margin: auto;
-    margin-left: 600px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 10px;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    background-size: 100% 100%;
-    max-width: 500px;
-    max-height: 300px;
-    justify-content: right;
-    flex-direction: column;
-}
-
-.column-ivartalanitas{
-    background-image: url("../img/ivartalanitas.jpg");
-    margin: auto;
-    margin-left: 600px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    background-size: 100% 100%;
-    max-width: 500px;
-    max-height: 300px;
-    justify-content: right;
-    flex-direction: column;
-}
-.column-gyujtesbovitesre{
-    margin: auto;
-    background-image: url("../img/gyujtesbovitesre.png");
-    margin-left: 600px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    background-size: 100% 100%;
-    max-width: 500px;
-    max-height: 300px;
-    justify-content: right;
-    flex-direction: column;
-}
-.column-gondozotkeresunk{
-    margin: auto;
-    background-image: url("../img/gondozotkeresunk.jpg");
-    margin-left: 600px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    background-size: 100% 100%;
-    max-width: 500px;
-    max-height: 250px;
-    justify-content: right;
-    flex-direction: column;
-}
-.column-etelgyujtes{
-    margin: auto;
-    background-image: url("../img/etelgyujtes.jpg");
-    margin-left: 600px;
-    background-size: cover;
-    background-position: right;
-    border-radius: 10px;
-    border-color: #192129;
-    border-style: solid;
-    border-width: 3px;
-    background-size: 100% 100%;
-    max-width: 500px;
-    max-height: 300px;
-    justify-content: right;
-    flex-direction: column;
-}
-
-
-.behuz li {
-    list-style-type: disc;
+.txt-container  p {
     margin: 5px;
+}
+.txt-container  ul {
+    margin: 5px;
+}
+.txt-container ul li {
+    margin: 1px;
+}
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px 0 0;
+}
+img {
+    min-width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 3px #192129 solid;
+}
+.igazit {
+    display: flex;
+    align-self: flex-end;
 }
