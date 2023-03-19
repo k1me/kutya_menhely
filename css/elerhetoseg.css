@@ -27,7 +27,7 @@
 
 .div-background {
     margin: auto;
-    background-image: url("/kutya_menhely/img/adoszazalek.jpg");
+    background-image: url("../img/adoszazalek.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -53,11 +53,17 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-
-
-
 }
 
-
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+}
 
 

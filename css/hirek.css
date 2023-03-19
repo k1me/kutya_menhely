@@ -15,6 +15,7 @@ section {
     padding: 10px;
     background-color: #8db8e0;
     border-radius: 10px;
+    margin: 10px
 }
 .igazit{
     text-align: right;
@@ -58,7 +59,7 @@ img {
     margin: auto;
 }
 .column-tuzijatek{
-    background-image: url("/kutya_menhely/img/tuzijatek.jpg");
+    background-image: url("../img/tuzijatek.jpg");
     margin: auto;
     margin-left: 600px;
     background-size: cover;
@@ -75,7 +76,7 @@ img {
     flex-direction: column;
 }
 .column-seta{
-    background-image: url("/kutya_menhely/img/seta.jpg");
+    background-image: url("../img/seta.jpg");
     margin: auto;
     margin-left: 600px;
     background-size: cover;
@@ -93,7 +94,7 @@ img {
 }
 
 .column-ivartalanitas{
-    background-image: url("/kutya_menhely/img/ivartalanitas.jpg");
+    background-image: url("../img/ivartalanitas.jpg");
     margin: auto;
     margin-left: 600px;
     background-size: cover;
@@ -110,7 +111,7 @@ img {
 }
 .column-gyujtesbovitesre{
     margin: auto;
-    background-image: url("/kutya_menhely/img/gyujtesbovitesre.png");
+    background-image: url("../img/gyujtesbovitesre.png");
     margin-left: 600px;
     background-size: cover;
     background-position: right;
@@ -126,7 +127,7 @@ img {
 }
 .column-gondozotkeresunk{
     margin: auto;
-    background-image: url("/kutya_menhely/img/gondozotkeresunk.jpg");
+    background-image: url("../img/gondozotkeresunk.jpg");
     margin-left: 600px;
     background-size: cover;
     background-position: right;
@@ -142,7 +143,7 @@ img {
 }
 .column-etelgyujtes{
     margin: auto;
-    background-image: url("/kutya_menhely/img/etelgyujtes.jpg");
+    background-image: url("../img/etelgyujtes.jpg");
     margin-left: 600px;
     background-size: cover;
     background-position: right;
