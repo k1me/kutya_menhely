@@ -1,28 +1,14 @@
+<?php
+    $title = 'Ajánló';
+    $page = 'ajanlo';
+    require('head.php');
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Új Kezdet Kutya Menhely</title>
-    <link rel="stylesheet" href="css/kozos.css">
-    <link rel="stylesheet" href="css/ajanlo.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="js/on_scroll_hide.js"></script>
-</head>
 <body>
-    <header>
-        <h1>új kezdet kutya menhely</h1>
-    </header>
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="hirek.html">Hírek</a></li>
-            <li><a href="orokbefogadas.html">Örökbefogadás</a></li>
-            <li><a href="elerhetoseg.html">Elérhetőség</a></li>
-            <li><a style="background-color:#133555;border-radius:10px;color:white" href="ajanlo.html">Ajánló</a></li>
-            <li class="login"><a href="login.html">Belépés</a></li>
-        </ul>
-    </nav>
+    <?php include 'header.php'; ?>
+    <?php include 'navbar.php'; ?>
     <div class="kerdoiv-container">
         <form class="kerdoiv">
             <h2>Milyen kutya illik hozzád?</h2>
@@ -264,10 +250,6 @@
             </table>
         </div>
     </div>
-    <div class="footer-container">
-        <footer>
-            <p>© 2023 Új Kezdet Kutya Menhely</p>
-        </footer>
-    </div>
+    <?php include_once 'footer.php'; ?>
 </body>
 </html>

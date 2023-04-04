@@ -8,7 +8,7 @@ body {
     display: none;
 }
 header {
-    height: 100%;
+    max-height: 100px;
     width: 100%;
     border-radius: 0 0 10px 10px;
     background-color: #c7e4ff;
@@ -55,6 +55,11 @@ ul li a {
     font-weight: bold;
 }
 ul li a:hover {
+    border-radius: 10px;
+    background-color: #133555;
+    color: white;
+}
+.active {
     border-radius: 10px;
     background-color: #133555;
     color: white;
