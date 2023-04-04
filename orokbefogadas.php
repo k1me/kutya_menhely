@@ -1,12 +1,12 @@
 <?php
     $title = 'Örökbefogadható kutyák';
     $page = 'orokbefogadas';
-    require('head.php');
+    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
     <div class="body-container">
         <div>
@@ -291,6 +291,6 @@
             </div>
         </div>
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.html'; ?>
 </body>
 </html>

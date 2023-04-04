@@ -1,13 +1,13 @@
 <?php
     $title = 'Elérhetőség';
     $page = 'elerhetoseg';
-    require('head.php');
+    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
 <body>
     <?php 
-    include 'header.php'; 
+    include 'header.html'; 
     include 'navbar.php'; 
     ?>
     <div class="body-container">
@@ -31,6 +31,6 @@
             </div>
         </div>
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.html'; ?>
 </body>
 </html>

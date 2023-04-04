@@ -1,13 +1,13 @@
 <?php
     $title = 'Ajánló';
     $page = 'ajanlo';
-    require('head.php');
+    require 'head.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="hu">
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
     <div class="kerdoiv-container">
         <form class="kerdoiv">
@@ -250,6 +250,6 @@
             </table>
         </div>
     </div>
-    <?php include_once 'footer.php'; ?>
+    <?php include_once 'footer.html'; ?>
 </body>
 </html>

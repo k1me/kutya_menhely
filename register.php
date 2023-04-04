@@ -1,12 +1,12 @@
 <?php
     $title = 'Regisztráció';
     $page = 'register';
-    require('head.php');
+    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
     <div class="form-wrapper">
         <form method="POST">
@@ -22,6 +22,6 @@
             <button type="reset" >Adatok törlése</button>
         </form>
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.html'; ?>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <?php
     $title = 'Belépés';
     $page = 'login';
-    require('head.php');
+    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
     <div class="form-wrapper">
         <form method="POST">
@@ -18,6 +18,6 @@
             <a href="register.php">Regisztráció</a>
         </form>
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.html'; ?>
 </body>
 </html>

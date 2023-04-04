@@ -1,12 +1,12 @@
 <?php
     $title = 'Hírek';
     $page = 'hirek';
-    require('head.php');
+    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
     <div class="section-container">
         <section class="wrapper">
@@ -105,6 +105,6 @@
         </div>
     </section>
     </div>
-    <?php include 'footer.php'; ?>
+    <?php include 'footer.html'; ?>
 </body>
 </html>
