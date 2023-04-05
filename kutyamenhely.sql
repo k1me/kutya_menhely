@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Ápr 05. 02:07
+-- Létrehozás ideje: 2023. Ápr 05. 21:26
 -- Kiszolgáló verziója: 10.4.27-MariaDB
 -- PHP verzió: 8.2.0
 
@@ -62,6 +62,21 @@ INSERT INTO `kutyak` (`nev`, `faj`, `nem`, `kor`) VALUES
 ('Pöttöm', 'Foxterrier', 0, 1),
 ('Ropi', 'Keverék', 1, 7),
 ('Tupák', 'Staffordshire Terrier', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `users`
+--
+
+CREATE TABLE `users` (
+  `uname` varchar(50) NOT NULL,
+  `passwd` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `birth` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
