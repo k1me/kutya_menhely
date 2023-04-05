@@ -8,7 +8,7 @@ body {
     display: none;
 }
 header {
-    max-height: 100px;
+    max-height: 250px;
     width: 100%;
     border-radius: 0 0 10px 10px;
     background-color: #c7e4ff;
