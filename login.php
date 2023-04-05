@@ -1,6 +1,6 @@
 <?php
-    $title = 'Belépés';
-    $page = 'login';
+$title = 'Belépés';
+$page = 'login';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
