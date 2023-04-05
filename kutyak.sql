@@ -61,7 +61,7 @@ INSERT INTO `kutyak` (`nev`, `faj`, `nem`, `kor`) VALUES
 ('Panír', 'Agár', 0, 1),
 ('Pöttöm', 'Foxterrier', 0, 1),
 ('Ropi', 'Keverék', 1, 7),
-('Tupák', 'Amerikai staffordshire terrier', 1, 1);
+('Tupák', 'Staffordshire Terrier', 1, 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

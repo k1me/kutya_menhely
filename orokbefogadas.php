@@ -13,7 +13,7 @@
             <h1>Örökbefogadható kutyák</h1>
         </div>
         <div class="card-holder">
-            <?php include 'queries/test.php'; ?>
+            <?php include 'queries/kutya_befogadas.php'; ?>
         </div>
     </div>
     <?php include 'footer.html'; ?>
