@@ -30,7 +30,9 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    border-radius: 20px
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
 }
 nav ul {
     list-style: none;
@@ -41,6 +43,7 @@ nav ul {
     margin: 0 10px;
     border: 3px solid #192129;
     border-radius: 10px;
+    width: 1500px;
 }
 ul li {
     float: left;
@@ -68,11 +71,11 @@ ul li.login {
     float: right;
 }
 @media screen and (max-width: 775px) {
-    ul li.right, 
+    ul li.login, 
     ul li {float: none !important;} 
   }
 
-header, section, aside, footer, nav, ul, li, a {
+header, section, aside, footer, ul, li, a {
     display: block;
 }
 /*eddig tart a navbar formázása*/
