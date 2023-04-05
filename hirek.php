@@ -1,10 +1,10 @@
 <?php
     $title = 'Hírek';
     $page = 'hirek';
-    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
+<?php include 'head.php'; ?>
 <body>
     <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>

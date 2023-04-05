@@ -1,10 +1,10 @@
 <?php
     $title = 'Új Kezdet Kutya Menhely';
     $page = 'index';
-    require 'head.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
+<?php include 'head.php'; ?>
 <body>
     <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>

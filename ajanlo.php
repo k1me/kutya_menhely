@@ -1,11 +1,11 @@
 <?php
     $title = 'Ajánló';
     $page = 'ajanlo';
-    require 'head.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="hu">
+<?php include 'head.php'; ?>
 <body>
     <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
