@@ -27,7 +27,8 @@
                         </ul>
                         <video class="video" width="700" autoplay muted>
                             <!-ide warningot dob a validator, de nem kell vele foglalkozni,
-                            mivel html5-ben már specifikálva van a "muted" attribútum->
+                            mivel html5-ben már specifikálva van a "muted" attribútum
+                            ref: https://html.spec.whatwg.org/multipage/media.html#attr-media-muted->
                             <source src="multi/video.mp4" type="video/mp4">
                         </video>
                     </div>
