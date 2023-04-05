@@ -3,6 +3,11 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "kutyamenhely";
+//ékezetes karakterek kicserélése a file nevében, mert azt nem szereti
+//mivel az adatbázisból kérdezzük le, így ott ékezetes nevek vannak és majrézik rá a validator 
+//strtr() függvény a stringekben kicseréli a karaktereket strtr(string, mit, mire) VAGY strtr(string, array(mit=>mire))
+$cserebere = array('Á'=>'a', 'É'=>'e', 'Í'=>'i', 'Ó'=>'o', 'Ö'=>'o', 'Ő'=>'o', 'Ú'=>'u','Ü'=>'u', 'Ű'=>'u',
+                   'á'=>'a','é'=>'e', 'í'=>'i','ó'=>'o','ö'=>'o','ú'=>'u','ü'=>'u','ű'=>'u','ő'=>'o',);
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
@@ -16,11 +21,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo'<div class="img-wrapper">';
         echo '<div>';
-            echo '<img src="img/'.$row["nev"].'.jpg" alt="archibald" height="80" width="120" class="kutya-img">';
+            echo '<img src="img/'.strtr($row["nev"],$cserebere).'.jpg" alt="archibald" height="80" width="120" class="kutya-img">';
         echo '</div>';
         echo '<div class="img-info">';
             echo '<div class="kutya-nev">';
-                echo "<p>".$row["nev"]."<p>";
+                echo "<p>".$row["nev"]."</p>";
             echo '</div>';
             echo '<div class="kutya-fajta">';
                 echo "<p>".$row["faj"]."</p>";
