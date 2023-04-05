@@ -25,7 +25,9 @@
                             <li>&#x2022; Minden befogadott kutyának joga van a biztonságra. A kutyamenhelyen élő szigorú szabályok mind az ő biztonságukat szolgálják.</li>
                             <li>&#x2022; Minden menhelyi kutyának joga van a megfelelő élettérre. Több kutya az élete jelentős részét egy kutyamenhelyen tölti, joga van a pihenésre, a nyugalomra, joga van olyan más kutyákkal élni egy térben, akikkel egyébként barátság köt.</li>
                         </ul>
-                        <video class="video" width="700"  autoplay muted>
+                        <video class="video" width="700" autoplay muted>
+                            <!-ide warningot dob a validator, de nem kell vele foglalkozni,
+                            mivel html5-ben már specifikálva van a "muted" attribútum->
                             <source src="multi/video.mp4" type="video/mp4">
                         </video>
                     </div>
