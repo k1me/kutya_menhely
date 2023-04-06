@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
     echo '<div class="flip-card">';
         echo '<div class="flip-card-inner">';
             echo '<div class="flip-card-front">';
-                echo '<img src="img/'.strtr($row["nev"],$cserebere).'.jpg" alt="'.$row["nev"].'" style="height:100%;">';
+                echo '<img src="img/'.strtolower(strtr($row["nev"],$cserebere)).'.jpg" alt="'.$row["nev"].'" style="height:100%;">';
             echo '</div>';
             echo '<div class="flip-card-back">';
                 echo "<h1>".$row["nev"]."</h1>";

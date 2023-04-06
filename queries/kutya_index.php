@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo'<div class="img-wrapper">';
         echo '<div>';
-            echo '<img src="img/'.strtr($row["nev"],$cserebere).'.jpg" alt="archibald" height="80" width="120" class="kutya-img">';
+            echo '<img src="img/'.strtolower(strtr($row["nev"],$cserebere)).'.jpg" alt='.$row["nev"].' height="80" width="120" class="kutya-img">';
         echo '</div>';
         echo '<div class="img-info">';
             echo '<div class="kutya-nev">';
