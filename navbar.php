@@ -15,8 +15,16 @@
         <li><a href="ajanlo.php" <?php if ($page =='ajanlo') {
                                     echo 'class="active"';
                                     } ?>>Ajánló</a></li>
-        <li class=login><a href="login.php" <?php if ($page =='login') {
-                                    echo 'class="active"';
-                                    } ?>>Belépés</a></li>
+        <?php if (isset($_SESSION['uname'])) { 
+            echo '<li class="login"><a href="logout.php">Kijelentkezés</a></li>';
+        } else {
+            echo '<li class="login"><a href="login.php "';
+            if ($page == 'login') {
+                echo 'class="active"';
+            }
+            echo '>Belépés</a></li>';
+        } 
+        ?>
+
     </ul>
 </nav>
