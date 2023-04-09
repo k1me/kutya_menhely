@@ -41,12 +41,12 @@ if (isset($_POST["regist"])) {
         $email = $_POST["email"];
         $passwd = $_POST["passwd"];
         $passwd_check = $_POST["passwd-check"];
-        $date_of_birth = $_POST["date-of-birth"];
+        $date_of_birth = date('Y-m-d', strtotime($_POST["date-of-birth"]));
 
         if ($passwd !== $passwd_check) {
             $errors[] = "A két jelszó nem egyezik!";
         } else {
-            $passwd = password_hash($passwd, PASSWORD_DEFAULT);
+            $hashed = hash('sha256', $passwd);
         }
 
         if (count($errors) === 0) {
@@ -54,14 +54,22 @@ if (isset($_POST["regist"])) {
             if ($conn->connect_error) {
                 die("Sikertelen csatlakozás: " . $conn->connect_error);
             }
-            $sql = "INSERT INTO users (uname, passwd, first_name, last_name, email, birth) VALUES ('$uname', '$passwd', '$first_name', '$last_name', '$email', '$date_of_birth')";
+            $sql = "INSERT INTO users(uname, passwd) 
+            VALUES ('$uname', '$hashed')";
+            if ($conn->query($sql) === TRUE) {
+                $utolso_adat = $conn->insert_id;
+                
+                $sql = "INSERT INTO user_info(uname, first_name, last_name, email, date_of_birth) 
+                VALUES ('$uname', '$first_name', '$last_name', '$email', '$date_of_birth');";
+                if ($conn->query($sql) === TRUE) {
+                    echo "Az adatok sikeresen hozzáadva!";
+                } else {
+                    $erros[] = "Hiba az adatok hozzáadásakor: " . $conn->error;
+                }
+            }
             $siker = TRUE;
-            $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $stmt->close();
-            $conn->close();
             header("Location: login.php");
-            exit;
+            $conn->close();
         } else {
             $siker = FALSE;
         }
@@ -80,13 +88,13 @@ $page = 'register';
         <form action="register.php" method="POST">
             <h2 id="login_h">regisztráció</h2>
             <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
-                <input type="text" name="first-name" placeholder="Keresztnév">
-                <input type="text" name="last-name" placeholder="Vezetéknév">
-                <input type="text" name="uname" placeholder="Felhasználónév">
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="password" name="passwd" placeholder="Jelszó">
-                <input type="password" name="passwd-check" placeholder="Jelszó ismét">
-                <label>Születési dátum: <input type="date" name="date-of-birth" min="1920-01-01"></label>
+            <input type="text" name="first-name" placeholder="Keresztnév">
+            <input type="text" name="last-name" placeholder="Vezetéknév">
+            <input type="text" name="uname" placeholder="Felhasználónév">
+            <input type="email" name="email" placeholder="E-mail">
+            <input type="password" name="passwd" placeholder="Jelszó">
+            <input type="password" name="passwd-check" placeholder="Jelszó ismét">
+            <label>Születési dátum: <input type="date" name="date-of-birth" min="1920-01-01"></label>
             <button type="submit" name="regist">Regisztráció</button>
             <button type="reset">Adatok törlése</button>
             <?php
