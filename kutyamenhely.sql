@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Ápr 05. 21:26
--- Kiszolgáló verziója: 10.4.27-MariaDB
--- PHP verzió: 8.2.0
+-- Host: localhost
+-- Generation Time: Apr 09, 2023 at 03:49 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `kutyamenhely`
+-- Database: `kutyamenhely`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `kutyak`
+-- Table structure for table `kutyak`
 --
 
 CREATE TABLE `kutyak` (
@@ -35,7 +35,7 @@ CREATE TABLE `kutyak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- A tábla adatainak kiíratása `kutyak`
+-- Dumping data for table `kutyak`
 --
 
 INSERT INTO `kutyak` (`nev`, `faj`, `nem`, `kor`) VALUES
@@ -66,17 +66,69 @@ INSERT INTO `kutyak` (`nev`, `faj`, `nem`, `kor`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `uname` varchar(50) NOT NULL,
-  `passwd` varchar(50) NOT NULL,
+  `passwd` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`uname`, `passwd`) VALUES
+('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'),
+('nagyarpi01', 'ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_info`
+--
+
+CREATE TABLE `user_info` (
+  `uname` varchar(50) NOT NULL,
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `birth` date NOT NULL
+  `date_of_birth` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_info`
+--
+
+INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_birth`) VALUES
+('admin', 'Pál', 'Bekre', 'admin@admin', '2012-12-12'),
+('nagyarpi01', 'Árpád', 'Nagy', 'nagyarpi@email.hu', '1987-01-01');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`uname`);
+
+--
+-- Indexes for table `user_info`
+--
+ALTER TABLE `user_info`
+  ADD KEY `uname` (`uname`);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `user_info`
+--
+ALTER TABLE `user_info`
+  ADD CONSTRAINT `user_info_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
