@@ -1,20 +1,10 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "kutyamenhely";
-$errors = [];
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $uname = $_POST['uname'];
     $passwd = $_POST['passwd'];
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error) {
-        die("Sikertelen csatlakozás: " . $conn->connect_error);
-    }
     $hashed = hash('sha256', $passwd);
+    include 'queries/db_connect.php';
 
     $sql = "SELECT * FROM users WHERE uname = '$uname'";
     $res = $conn->query($sql);
@@ -53,7 +43,7 @@ $page = 'login';
             <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
             <?php 
             if (isset($siker) && $siker === TRUE) {
-                echo "<p>Sikeres regisztráció!</p>";
+                echo "<p>Sikeres belépés!</p>";
             } else {
                 foreach ($errors as $error) {
                     echo "<p>$error</p>";
