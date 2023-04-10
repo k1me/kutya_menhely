@@ -4,13 +4,13 @@ window.onscroll = function() {
     if (elozoScrollPozicio > jelenlegiScrollPozicio) {
         document.getElementById("navbar").style.top = "0";
     } else {
-        document.getElementById("navbar").style.top = "-50px";
+        document.getElementById("navbar").style.top = "-100px";
     }
     if (window.innerWidth < 800) {
         if (elozoScrollPozicio > jelenlegiScrollPozicio) {
             document.getElementById("navbar").style.top = "0";
         } else {
-            document.getElementById("navbar").style.top = "-300px";
+            document.getElementById("navbar").style.top = "-350px";
         }
     }
     elozoScrollPozicio = jelenlegiScrollPozicio;
