@@ -1,27 +1,31 @@
 <?php
-include 'queries/db_connect.php';
+    session_start();
+    $title = 'Saját profil';
+    $page = 'profil';
+    include 'queries/db_connect.php';
 
-$errors = [];
+    $errors = [];
 
-if (isset($_POST["mentes"])) {
-    if (!isset($_POST["passwd"]) || trim($_POST["passwd"]) === "") {
-        $errors[] = '<strong>A jelszó megadása</strong> <strong style="color:red;">kötelező!</strong>';
+    if (isset($_POST["jelszo"])) {
+        if (!isset($_POST["passwd"]) || trim($_POST["passwd"]) === "") {
+            $errors[] = '<strong>A jelszó megadása</strong><strong style="color:red;">kötelező!</strong>';
+        } else if (isset($_POST['passwd']) && isset($_POST['passwd-rep'])) {
+            if ($_POST['passwd'] == $_POST['passwd-rep']) {
+                $password = $_POST['passwd'];
+                $hashed = hash('sha256', $password);
+                $sql = "UPDATE users
+                        SET passwd = '$hashed'
+                        WHERE uname = '{$_SESSION['uname']}'";
+                if(mysqli_query($conn, $sql)) {
+                    $siker = TRUE;
+                    header('Location: logout.php');
+                } else {
+                    $siker = FALSE;
+                }
+            } else {
+                $errors[] = '<strong>Nem egyeznek a jelszavak!<strong>';
+            }
+        }
     }
-}
-if (isset($_POST['$passwd']) && isset($_POST['$passwd-rep'])) {
-    if ($_POST['$passwd'] == $_POST['$passwd-rep']) {
-        $password = $_POST['passwd'];
-    }
-}
-$password = hash('sha256', $password);
-$sql = "UPDATE users
-        SET passwd = {$_POST['passwd']}
-        WHERE uname = {$_SESSION['uname']}";
-if(mysqli_query($conn, $sql)) {
-    $siker = TRUE;
-    header('Location: profil.php');
-} else {
-    $siker = FALSE;
-}
-mysqli_close($conn);
+    mysqli_close($conn);
 ?>

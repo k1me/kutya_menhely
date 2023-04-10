@@ -1,33 +1,6 @@
 <?php
-    session_start();
-    $title = 'Saját profil';
-    $page = 'profil';
-    include 'queries/db_connect.php';
-
-    $errors = [];
-
-    if (isset($_POST["mentes"])) {
-        if (!isset($_POST["passwd"]) || trim($_POST["passwd"]) === "") {
-            $errors[] = '<strong>A jelszó megadása</strong><strong style="color:red;">kötelező!</strong>';
-        } else if (isset($_POST['passwd']) && isset($_POST['passwd-rep'])) {
-            if ($_POST['passwd'] == $_POST['passwd-rep']) {
-                $password = $_POST['passwd'];
-                $hashed = hash('sha256', $password);
-                $sql = "UPDATE users
-                        SET passwd = '$hashed'
-                        WHERE uname = '{$_SESSION['uname']}'";
-                if(mysqli_query($conn, $sql)) {
-                    $siker = TRUE;
-                    header('Location: logout.php');
-                } else {
-                    $siker = FALSE;
-                }
-            } else {
-                $errors[] = '<strong>Nem egyeznek a jelszavak!<strong>';
-            }
-        }
-    }
-    mysqli_close($conn);
+session_start();
+include 'queries/pw_change.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -50,7 +23,7 @@
                             <input type="password" id="pws" name="passwd" placeholder="Jelszó">
                             <label for="psw-repeat">Jelszó újra:</label>
                             <input type="password" id="pws-repeat" name="passwd-rep" placeholder="Jelszó újra">
-                            <button type="submit" name="mentes">Mentés</button>
+                            <button type="submit" name="jelszo">Mentés</button>
                             <?php
                             if (isset($siker) && $siker === TRUE) {
                                 echo "<p>Sikeres regisztráció!</p>";
@@ -66,7 +39,7 @@
                         <div id="pfp-picker">
                             <label for="pfp">Kiválsztás:</label>
                             <input type="file" name="pfp" id="pfp">
-                            <button  type="submit">Mentés</button>
+                            <button  type="submit" name="profpic">Mentés</button>
                         </div>
                     </form>
                 </div>
