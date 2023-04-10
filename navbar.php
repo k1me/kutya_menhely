@@ -17,6 +17,11 @@
                                     } ?>>Ajánló</a></li>
         <?php if (isset($_SESSION['uname'])) { 
             echo '<li class="login"><a href="logout.php">Kijelentkezés</a></li>';
+            echo '<li class="login"><a href="profil.php "';
+            if ($page == 'profil') {
+                echo 'class="active"';
+            }
+            echo '>Profil</a></li>';
         } else {
             echo '<li class="login"><a href="login.php "';
             if ($page == 'login') {
