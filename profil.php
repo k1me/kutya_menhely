@@ -1,6 +1,9 @@
 <?php
 session_start();
+$title = 'Saját profil';
+$page = 'profil';
 include 'queries/pw_change.php';
+include 'queries/pfp_change.php';
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -26,7 +29,7 @@ include 'queries/pw_change.php';
                             <button type="submit" name="jelszo">Mentés</button>
                             <?php
                             if (isset($siker) && $siker === TRUE) {
-                                echo "<p>Sikeres regisztráció!</p>";
+                                echo "<p>Sikeres jelszó változtatás</p>";
                             } else {
                                 foreach ($errors as $error) {
                                     echo "<p>" . $error . "</p>";
@@ -39,7 +42,7 @@ include 'queries/pw_change.php';
                         <div id="pfp-picker">
                             <label for="pfp">Kiválsztás:</label>
                             <input type="file" name="pfp" id="pfp">
-                            <button  type="submit" name="profpic">Mentés</button>
+                            <button  type="submit" name="feltolt">Mentés</button>
                         </div>
                     </form>
                 </div>

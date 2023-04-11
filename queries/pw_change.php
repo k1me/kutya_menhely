@@ -1,7 +1,4 @@
 <?php
-    session_start();
-    $title = 'Saját profil';
-    $page = 'profil';
     include 'queries/db_connect.php';
 
     $errors = [];
