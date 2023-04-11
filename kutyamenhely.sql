@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 09, 2023 at 03:49 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2023. Ápr 11. 19:58
+-- Kiszolgáló verziója: 10.4.27-MariaDB
+-- PHP verzió: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `kutyamenhely`
+-- Adatbázis: `kutyamenhely`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kutyak`
+-- Tábla szerkezet ehhez a táblához `kutyak`
 --
 
 CREATE TABLE `kutyak` (
@@ -35,7 +35,7 @@ CREATE TABLE `kutyak` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `kutyak`
+-- A tábla adatainak kiíratása `kutyak`
 --
 
 INSERT INTO `kutyak` (`nev`, `faj`, `nem`, `kor`) VALUES
@@ -66,7 +66,7 @@ INSERT INTO `kutyak` (`nev`, `faj`, `nem`, `kor`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Tábla szerkezet ehhez a táblához `users`
 --
 
 CREATE TABLE `users` (
@@ -75,7 +75,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users`
+-- A tábla adatainak kiíratása `users`
 --
 
 INSERT INTO `users` (`uname`, `passwd`) VALUES
@@ -85,7 +85,7 @@ INSERT INTO `users` (`uname`, `passwd`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_info`
+-- Tábla szerkezet ehhez a táblához `user_info`
 --
 
 CREATE TABLE `user_info` (
@@ -93,39 +93,40 @@ CREATE TABLE `user_info` (
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `date_of_birth` date NOT NULL
+  `date_of_birth` date NOT NULL,
+  `pfp` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user_info`
+-- A tábla adatainak kiíratása `user_info`
 --
 
-INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_birth`) VALUES
-('admin', 'Pál', 'Bekre', 'admin@admin', '2012-12-12'),
-('nagyarpi01', 'Árpád', 'Nagy', 'nagyarpi@email.hu', '1987-01-01');
+INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_birth`, `pfp`) VALUES
+('admin', 'Pál', 'Bekre', 'admin@admin', '2012-12-12', NULL),
+('nagyarpi01', 'Árpád', 'Nagy', 'nagyarpi@email.hu', '1987-01-01', NULL);
 
 --
--- Indexes for dumped tables
+-- Indexek a kiírt táblákhoz
 --
 
 --
--- Indexes for table `users`
+-- A tábla indexei `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`uname`);
 
 --
--- Indexes for table `user_info`
+-- A tábla indexei `user_info`
 --
 ALTER TABLE `user_info`
   ADD KEY `uname` (`uname`);
 
 --
--- Constraints for dumped tables
+-- Megkötések a kiírt táblákhoz
 --
 
 --
--- Constraints for table `user_info`
+-- Megkötések a táblához `user_info`
 --
 ALTER TABLE `user_info`
   ADD CONSTRAINT `user_info_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`);
