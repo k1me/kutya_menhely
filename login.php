@@ -1,5 +1,6 @@
 <?php
 session_start();
+$errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $uname = $_POST['uname'];
     $passwd = $_POST['passwd'];
