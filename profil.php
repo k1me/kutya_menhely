@@ -42,7 +42,10 @@ include 'queries/pfp_change.php';
                         <div id="pfp-picker">
                             <label for="pfp">Kiválsztás:</label>
                             <input type="file" name="pfp" id="pfp">
-                            <button  type="submit" name="feltolt">Mentés</button>
+                            <div>
+                                <button  type="submit" name="feltolt">Mentés</button>
+                                <button type="submit" name="torol">Törlés</a></button>';
+                            </div>
                         </div>
                     </form>
                 </div>
