@@ -6,18 +6,18 @@ include "db_connect.php";
 $cserebere = array('Á'=>'a', 'É'=>'e', 'Í'=>'i', 'Ó'=>'o', 'Ö'=>'o', 'Ő'=>'o', 'Ú'=>'u','Ü'=>'u', 'Ű'=>'u',
                    'á'=>'a','é'=>'e', 'í'=>'i','ó'=>'o','ö'=>'o','ú'=>'u','ü'=>'u','ű'=>'u','ő'=>'o',);
 
-$sql = "SELECT nev, faj, nem, kor FROM kutyak";
+$sql = "SELECT dname, faj, nem, kor FROM kutyak";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     echo'<div class="img-wrapper">';
         echo '<div>';
-            echo '<img src="img/'.strtolower(strtr($row["nev"],$cserebere)).'.jpg" alt='.$row["nev"].' height="80" width="120" class="kutya-img">';
+            echo '<img src="img/'.strtolower(strtr($row["dname"],$cserebere)).'.jpg" alt='.$row["dname"].' height="80" width="120" class="kutya-img">';
         echo '</div>';
         echo '<div class="img-info">';
             echo '<div class="kutya-nev">';
-                echo "<p>".$row["nev"]."</p>";
+                echo "<p>".$row["dname"]."</p>";
             echo '</div>';
             echo '<div class="kutya-fajta">';
                 echo "<p>".$row["faj"]."</p>";

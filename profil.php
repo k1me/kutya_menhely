@@ -44,7 +44,7 @@ include 'queries/pfp_change.php';
                             <input type="file" name="pfp" id="pfp">
                             <div>
                                 <button  type="submit" name="feltolt">Mentés</button>
-                                <button type="submit" name="torol">Törlés</a></button>';
+                                <button type="submit" name="torol">Törlés</button>
                             </div>
                         </div>
                     </form>

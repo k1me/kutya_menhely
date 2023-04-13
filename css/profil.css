@@ -18,18 +18,17 @@ h1 {
     align-items: flex-start;
     justify-content: center;
     align-self: center;
-    background-color: #8db8e0;
-    border-radius: 10px;
     width: 1500px;
-    padding: 10px;
 }
 .info-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    background-color: #8db8e0;
+    border-radius: 10px;
     padding: 10px;
-    width: 500px;
+    width: 100%;
 }
 .info-container h2 {
     font-size: 25px;
@@ -49,9 +48,13 @@ h1 {
 .form-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 10px;
+    background-color: #8db8e0;
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 100%;
 }
 .pw-vrfy {
     display: flex;
@@ -101,5 +104,17 @@ button:hover {
 @media screen and (max-width: 775px) {
     .profil-container {
         flex-direction: column;
+    }
+    .profil {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .info-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .form-container {
+        width: 100%;
+        margin-left: 0;
     }
 }

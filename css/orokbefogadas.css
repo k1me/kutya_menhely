@@ -5,6 +5,13 @@ h1 {
   color: #8db8e0;
   margin: 25px;
 }
+.flip-card-back h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #8db8e0;
+  margin: 10px;
+}
+
 .body-container {
   display: flex;
   flex-direction: column;
@@ -53,4 +60,24 @@ h1 {
   border-radius: 10px;
   color: white;
   transform: rotateY(180deg);
+}
+.flip-card-back button {
+  background-color: #133555;
+  border-radius: 10px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+.flip-card-back a {
+  text-decoration: none;
+  color: white;
+}
+button:hover {
+  opacity: 0.8;
+}
+.flip-card-back button:disabled:hover {
+  opacity: 1;
+  cursor: not-allowed;
 }
