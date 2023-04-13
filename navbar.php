@@ -30,6 +30,5 @@
             echo '>Belépés</a></li>';
         } 
         ?>
-
     </ul>
 </nav>
