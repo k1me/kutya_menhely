@@ -1,4 +1,8 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "kutyamenhely";
 $errors = [];
 
 if (isset($_POST["regist"])) {
@@ -46,7 +50,10 @@ if (isset($_POST["regist"])) {
         }
 
         if (count($errors) === 0) {
-            include 'queries/db_connect.php';
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            if ($conn->connect_error) {
+                die("Sikertelen csatlakozás: " . $conn->connect_error);
+            }
             $sql = "INSERT INTO users(uname, passwd) 
             VALUES ('$uname', '$hashed')";
             if ($conn->query($sql) === TRUE) {
