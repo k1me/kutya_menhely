@@ -20,7 +20,6 @@ div .section-container > h2 {
 .section-container {
     display: flex;
     flex-direction: column;
-    
 }
 section {
     max-width: 1150px;
