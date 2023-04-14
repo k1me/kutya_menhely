@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Ápr 14. 14:08
+-- Létrehozás ideje: 2023. Ápr 15. 00:25
 -- Kiszolgáló verziója: 10.4.27-MariaDB
 -- PHP verzió: 8.2.0
 
@@ -51,13 +51,13 @@ CREATE TABLE `kutyak` (
 --
 
 INSERT INTO `kutyak` (`dname`, `faj`, `nem`, `kor`, `is_adopted`) VALUES
-('Archibald', 'Keverék', 1, 4, 1),
-('Baltazár', 'Németjuhász', 1, 2, 1),
-('Bendegúz', 'Keverék', 1, 1, 1),
+('Archibald', 'Keverék', 1, 4, 0),
+('Baltazár', 'Németjuhász', 1, 2, 0),
+('Bendegúz', 'Keverék', 1, 1, 0),
 ('Cölöp', 'Labrador', 0, 2, 0),
-('Doroti', 'Keverék', 0, 3, 1),
-('Esztebán', 'Staffordshire Terrier', 1, 6, 1),
-('Ferec', 'Keverék', 1, 5, 1),
+('Doroti', 'Keverék', 0, 3, 0),
+('Esztebán', 'Staffordshire Terrier', 1, 6, 0),
+('Ferec', 'Keverék', 1, 5, 0),
 ('Gertrúdisz', 'Keverék', 0, 2, 0),
 ('Gyömbér', 'Keverék', 0, 7, 0),
 ('Imre', 'Keverék', 1, 4, 0),
@@ -78,6 +78,34 @@ INSERT INTO `kutyak` (`dname`, `faj`, `nem`, `kor`, `is_adopted`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `replies`
+--
+
+CREATE TABLE `replies` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `creator` varchar(50) NOT NULL,
+  `content` varchar(500) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp(),
+  `parent_id` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `topics`
+--
+
+CREATE TABLE `topics` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `creator` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `content` varchar(500) NOT NULL,
+  `date` datetime NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `users`
 --
 
@@ -91,7 +119,19 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uname`, `passwd`) VALUES
-('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
+('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'),
+('agyalagyula', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('akciosaron01', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('bekrepal', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('benedekelek345', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('borozoltan27', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('fazoltan28', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('hatizsak1997', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('iszakos89', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('kismiki71', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('nagyferi01', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('pofazoltan', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6'),
+('szemese', '688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6');
 
 -- --------------------------------------------------------
 
@@ -114,7 +154,19 @@ CREATE TABLE `user_info` (
 --
 
 INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_birth`, `pfp`, `privileged`) VALUES
-('admin', 'Aladár', 'Adminisztrátor', 'admin@admin', '2001-12-12', NULL, 1);
+('admin', 'Aladár', 'Adminisztrátor', 'admin@admin', '2001-12-12', NULL, 1),
+('nagyferi01', 'Ferenc', 'Nagy', 'nagyferi@email', '1979-12-12', NULL, 0),
+('szemese', 'Emese', 'Szolnoki', 'nemalljola@szemese', '2001-12-12', NULL, 0),
+('pofazoltan', 'Zoltán', 'Pofá', 'pofazoltan@email', '1999-12-12', NULL, 0),
+('bekrepal', 'Pál', 'Bekre', 'bekrepal@email', '1998-12-12', NULL, 0),
+('agyalagyula', 'Gyula', 'Agyalá', 'agyalagyula@email', '1997-12-12', NULL, 0),
+('fazoltan28', 'Zoltán', 'Fá', 'fazoltan@email', '2001-12-12', NULL, 0),
+('hatizsak1997', 'Izsák', 'Hát', 'hatizsak@email', '1965-12-12', NULL, 0),
+('akciosaron01', 'Áron', 'Akciós', 'akciosaron@email', '2002-12-12', NULL, 0),
+('borozoltan27', 'Zoltán', 'Boro', 'borozoltan@email', '2003-02-02', NULL, 0),
+('iszakos89', 'Ákos', 'Isz', 'iszakos@email', '1989-03-04', NULL, 0),
+('kismiki71', 'Miklós', 'Kis', 'kismiki@email', '1978-06-05', NULL, 0),
+('benedekelek345', 'Elek', 'Benedek', 'bendek@email', '2001-01-01', NULL, 0);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -133,6 +185,19 @@ ALTER TABLE `kutyak`
   ADD PRIMARY KEY (`dname`);
 
 --
+-- A tábla indexei `replies`
+--
+ALTER TABLE `replies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_replies_topics` (`parent_id`);
+
+--
+-- A tábla indexei `topics`
+--
+ALTER TABLE `topics`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `users`
 --
 ALTER TABLE `users`
@@ -145,6 +210,22 @@ ALTER TABLE `user_info`
   ADD KEY `fk_uname` (`uname`);
 
 --
+-- A kiírt táblák AUTO_INCREMENT értéke
+--
+
+--
+-- AUTO_INCREMENT a táblához `replies`
+--
+ALTER TABLE `replies`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT a táblához `topics`
+--
+ALTER TABLE `topics`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- Megkötések a kiírt táblákhoz
 --
 
@@ -153,6 +234,12 @@ ALTER TABLE `user_info`
 --
 ALTER TABLE `adoption`
   ADD CONSTRAINT `fk_uname2` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+--
+-- Megkötések a táblához `replies`
+--
+ALTER TABLE `replies`
+  ADD CONSTRAINT `fk_replies_topics` FOREIGN KEY (`parent_id`) REFERENCES `topics` (`id`);
 
 --
 -- Megkötések a táblához `user_info`
