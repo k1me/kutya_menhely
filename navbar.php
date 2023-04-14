@@ -15,7 +15,10 @@
         <li><a href="ajanlo.php" <?php if ($page =='ajanlo') {
                                     echo 'class="active"';
                                     } ?>>Ajánló</a></li>
-        <?php if (isset($_SESSION['uname'])) { 
+        <li><a href="forum.php" <?php if ($page =='forum') {
+                                    echo 'class="active"';
+                                    } ?>>Fórum</a></li>
+        <?php if (isset($_SESSION['uname'])) {
             echo '<li class="login"><a href="logout.php">Kijelentkezés</a></li>';
             echo '<li class="login"><a href="profil.php "';
             if ($page == 'profil') {
