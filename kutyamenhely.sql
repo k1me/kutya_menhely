@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Ápr 13. 20:34
+-- Létrehozás ideje: 2023. Ápr 14. 14:08
 -- Kiszolgáló verziója: 10.4.27-MariaDB
 -- PHP verzió: 8.2.0
 
@@ -51,13 +51,13 @@ CREATE TABLE `kutyak` (
 --
 
 INSERT INTO `kutyak` (`dname`, `faj`, `nem`, `kor`, `is_adopted`) VALUES
-('Archibald', 'Keverék', 1, 4, 0),
-('Baltazár', 'Németjuhász', 1, 2, 0),
-('Bendegúz', 'Keverék', 1, 1, 0),
+('Archibald', 'Keverék', 1, 4, 1),
+('Baltazár', 'Németjuhász', 1, 2, 1),
+('Bendegúz', 'Keverék', 1, 1, 1),
 ('Cölöp', 'Labrador', 0, 2, 0),
-('Doroti', 'Keverék', 0, 3, 0),
-('Esztebán', 'Staffordshire Terrier', 1, 6, 0),
-('Ferec', 'Keverék', 1, 5, 0),
+('Doroti', 'Keverék', 0, 3, 1),
+('Esztebán', 'Staffordshire Terrier', 1, 6, 1),
+('Ferec', 'Keverék', 1, 5, 1),
 ('Gertrúdisz', 'Keverék', 0, 2, 0),
 ('Gyömbér', 'Keverék', 0, 7, 0),
 ('Imre', 'Keverék', 1, 4, 0),
@@ -91,9 +91,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uname`, `passwd`) VALUES
-('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'),
-('kispista', '54d5cb2d332dbdb4850293caae4559ce88b65163f1ea5d4e4b3ac49d772ded14'),
-('nagyarpi01', 'ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f');
+('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918');
 
 -- --------------------------------------------------------
 
@@ -107,17 +105,16 @@ CREATE TABLE `user_info` (
   `last_name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `date_of_birth` date NOT NULL,
-  `pfp` varchar(200) DEFAULT NULL
+  `pfp` varchar(50) DEFAULT NULL,
+  `privileged` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `user_info`
 --
 
-INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_birth`, `pfp`) VALUES
-('admin', 'Pál', 'Bekre', 'admin@admin', '2012-12-12', NULL),
-('nagyarpi01', 'Árpád', 'Nagy', 'nagyarpi@email.hu', '1987-01-01', NULL),
-('kispista', 'Pista', 'Kis', 'kispista@email', '2012-12-12', NULL);
+INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_birth`, `pfp`, `privileged`) VALUES
+('admin', 'Aladár', 'Adminisztrátor', 'admin@admin', '2001-12-12', NULL, 1);
 
 --
 -- Indexek a kiírt táblákhoz
@@ -127,8 +124,7 @@ INSERT INTO `user_info` (`uname`, `first_name`, `last_name`, `email`, `date_of_b
 -- A tábla indexei `adoption`
 --
 ALTER TABLE `adoption`
-  ADD UNIQUE KEY `dname` (`dname`),
-  ADD KEY `uname` (`uname`);
+  ADD KEY `fk_uname2` (`uname`);
 
 --
 -- A tábla indexei `kutyak`
@@ -146,7 +142,7 @@ ALTER TABLE `users`
 -- A tábla indexei `user_info`
 --
 ALTER TABLE `user_info`
-  ADD KEY `uname` (`uname`);
+  ADD KEY `fk_uname` (`uname`);
 
 --
 -- Megkötések a kiírt táblákhoz
@@ -156,15 +152,13 @@ ALTER TABLE `user_info`
 -- Megkötések a táblához `adoption`
 --
 ALTER TABLE `adoption`
-  ADD CONSTRAINT `adoption_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`),
-  ADD CONSTRAINT `dname` FOREIGN KEY (`dname`) REFERENCES `kutyak` (`dname`),
-  ADD CONSTRAINT `uname` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`);
+  ADD CONSTRAINT `fk_uname2` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Megkötések a táblához `user_info`
 --
 ALTER TABLE `user_info`
-  ADD CONSTRAINT `user_info_ibfk_1` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`);
+  ADD CONSTRAINT `fk_uname` FOREIGN KEY (`uname`) REFERENCES `users` (`uname`) ON DELETE CASCADE ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
