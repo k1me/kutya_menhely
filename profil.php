@@ -1,4 +1,5 @@
 <?php
+global $errors;
 session_start();
 $title = 'Saját profil';
 $page = 'profil';

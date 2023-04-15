@@ -1,5 +1,6 @@
 <?php
-    session_start();
+global $conn;
+session_start();
     $title = 'Fórum';
     $page = 'forum';
 

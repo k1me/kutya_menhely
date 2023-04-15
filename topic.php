@@ -1,5 +1,6 @@
 <?php
-    session_start();
+global $conn;
+session_start();
     $title = 'Fórum';
     $page = 'topic';
     include 'queries/db_connect.php';
@@ -14,7 +15,7 @@
                     $siker = TRUE;
                     $conn->close();
                 } else {
-                    $errors[] = 'A hosszúsúsűg nem megfelelő!';
+                    $errors[] = 'A hosszúság nem megfelelő!';
                 }
             } else {
                 $siker = FALSE;

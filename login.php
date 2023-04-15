@@ -1,4 +1,5 @@
 <?php
+global $conn;
 session_start();
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
