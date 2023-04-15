@@ -3,7 +3,6 @@
     $title = 'Ajánló';
     $page = 'ajanlo';
 ?>
-
 <!DOCTYPE html>
 <html lang="hu">
 <?php include 'head.php'; ?>
@@ -12,7 +11,7 @@
     <?php include 'navbar.php'; ?>
     <div class="kerdoiv-container">
         <form class="kerdoiv">
-            <h2>Milyen kutya illik hozzád?</h2>
+            <h1>Milyen kutya illik hozzád?</h1>
             <div class="fieldset-container">
                 <fieldset id="meret">
                     <legend>Kutya mérete</legend>
@@ -141,7 +140,7 @@
     </div>
     <div class="tapajanlo">
         <div class="table-wrapper">
-            <h2>Mennyit egyen a kutyád?</h2>
+            <h1>Mennyit egyen a kutyád?</h1>
             <table>
                 <tr>
                     <th colspan="7">Ajánlott napi mennyiség grammban</th>

@@ -1,9 +1,8 @@
-div .section-container > h2 {
-    font-size: 40px;
-    color: #8db8e0;
-    text-transform: capitalize;
-    margin: 10px 10px 0 10px;
-    padding: 90px 0 0 0;
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #483434;
+    margin: 0 0 20px 0;
 }
 .body-container {
     display: flex;
@@ -26,7 +25,7 @@ section {
     float: left;
     margin: 0 10px 10px 0;
     padding: 10px;
-    background-color: #8db8e0;
+    background-color: #EED6C4;
     border-radius: 10px;
     text-align: justify;
 }
@@ -45,7 +44,7 @@ aside {
     float: left;
     margin: 0;
     padding: 10px;
-    background-color: #8db8e0;
+    background-color: #EED6C4;
     border-radius: 10px;
 }
 .video-container {
@@ -77,14 +76,14 @@ aside {
 .img-wrapper {
     width: 100%;
     line-height: 0;
-    border-bottom: 1px solid #192129;
+    border-bottom: 1px solid #483434;
     margin-bottom: 10px;
     padding-bottom: 25px;
 }
 .kutya-img {
     float: left;
     border-radius: 40px;
-    border: 2px solid #192129;
+    border: 2px solid #483434;
 }
 .img-info {
     display: flex;
@@ -96,13 +95,13 @@ aside {
 .kutya-nev {
     height: 25px;
     font-weight: bold;
-    color: #192129;
+    color: #483434;
     text-transform: capitalize;
     font-style: italic;
 }
 .kutya-fajta {
     height: 25px;
-    color: #192129;
+    color: #483434;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -113,13 +112,13 @@ aside {
     font-size: 12px;
 }
 .nem {
-    color: #192129;
+    color: #483434;
     text-transform: uppercase;
-    border-right: 1px solid #192129;
+    border-right: 1px solid #483434;
     padding-right: 5px;
 }
 .kor {
-    color: #192129;
+    color: #483434;
     text-transform: uppercase;
     padding-left: 5px;
 }
@@ -139,16 +138,15 @@ aside {
 .kuglof-img {
     max-width: 250px;
     border-radius: 10px;
-    border-color: #192129;
+    border-color: #483434;
     border-style: solid;
     border-width: 3px;
     margin: 5px;
 }
-
 .video {
     display: flex;
     width: 100%;
     border-radius: 10px;
-    border: 3px #192129 solid;
+    border: 3px #483434 solid;
 }
 

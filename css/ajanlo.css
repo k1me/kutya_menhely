@@ -1,3 +1,10 @@
+h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #483434;
+  margin: 25px;
+}
 .kerdoiv-container {
   display: flex;
   max-width: 100%;
@@ -9,17 +16,11 @@
   width: 100%;
   align-items: center;
 }
-.kerdoiv h2 {
-  color: #8db8e0;
-  text-align: center;
-  font-size: 40px;
-  margin: 0 0 20px 0;
-}
 .fieldset-container {
   display: flex;
   flex-direction: row;
   max-width: 1500px;
-  background-color: #8db8e0;
+  background-color: #EED6C4;
   border-radius: 10px;
   justify-content: center;
   flex-wrap: wrap;
@@ -27,7 +28,7 @@
 .kerdoiv fieldset {
   width: 250px;
   height: auto;
-  border: 2px solid #192129;
+  border: 2px solid #483434;
   border-radius: 10px;
   max-width: 300px;
   margin: 10px;
@@ -46,13 +47,13 @@
   justify-content: center;
   width: 300px;
   height: 60px;
-  background-color: #8db8e0;
+  background-color: #EED6C4;
   border-radius: 0 0 10px 10px;
 }
 .gomb button {
-  background-color: #133555;
+  background-color: #6B4F4F;
   border-radius: 10px;
-  color: white;
+  color: #FFF3E4;
   padding: 14px 20px;
   margin: 10px;
   border: none;
@@ -74,24 +75,18 @@ button:hover {
   max-width: 100%;
   padding: 10px;
 }
-.table-wrapper h2 {
-  color: #8db8e0;
-  text-align: center;
-  font-size: 40px;
-  margin: 0 0 20px 0;
-}
 table {
   border-spacing: 7px;
 }
 th, td {
-  border: 2px solid #192129;
+  border: 2px solid #483434;
   border-radius: 10px;
   padding: 5px;
-  box-shadow: 2px 3px 1px #8db8e0;
-  background-color: #8db8e0;
+  box-shadow: 2px 3px 1px #6B4F4F;
+  background-color: #EED6C4;
   text-align: center;
 }
 th {
-  background-color: #133555;
-  color: white;
+  background-color: #6B4F4F;
+  color: #FFF3E4;
 }

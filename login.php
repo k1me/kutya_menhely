@@ -39,18 +39,18 @@ $page = 'login';
 <body>
     <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
+    <h1>Belépés</h1>
     <div class="form-wrapper">
         <form action="login.php" method="POST" >
-            <h2 id="login_h">belépés</h2>
             <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
             <?php 
-            if (isset($siker) && $siker === TRUE) {
-                echo "<p>Sikeres belépés!</p>";
-            } else {
-                foreach ($errors as $error) {
-                    echo "<p>$error</p>";
+                if (isset($siker) && $siker === TRUE) {
+                    echo "<p>Sikeres belépés!</p>";
+                } else {
+                    foreach ($errors as $error) {
+                        echo "<p>$error</p>";
+                    }
                 }
-            }
             ?>
             <input type="text" name="uname" placeholder="Felhasználónév">
             <input type="password" name="passwd" placeholder="Jelszó" required>

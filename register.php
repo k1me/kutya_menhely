@@ -84,9 +84,9 @@ $page = 'register';
 <body>
     <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
+    <h1 id="login_h">Regisztráció</h1>
     <div class="form-wrapper">
         <form action="register.php" method="POST">
-            <h2 id="login_h">regisztráció</h2>
             <img src="img/login_avatar.png" alt="login-avatar" class="avatar">
             <input type="text" name="first-name" placeholder="Keresztnév">
             <input type="text" name="last-name" placeholder="Vezetéknév">

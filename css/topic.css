@@ -2,15 +2,10 @@ h2 {
     text-align: center;
     font-size: 40px;
     font-weight: bold;
-    color: #8db8e0;
+    color: #483434;
   margin: 0 0 20px 0;
 }
-h3{
-    font-size: 20px;
-    font-weight: bold;
-    color: #8db8e0;
-  margin: 20px 0 20px 0;
-}
+
 .body-container {
     display: flex;
     flex-direction: column;
@@ -32,7 +27,7 @@ h3{
 section {
     display: flex;
     flex-direction: column;
-    background-color: #8db8e0;
+    background-color: #EED6C4;
     border-radius: 10px;
     margin:5px;
     padding: 10px;
@@ -72,9 +67,9 @@ textarea {
     display: block;
 }
 button {
-    background-color: #133555;
+    background-color: #6B4F4F;
     border-radius: 10px;
-    color: white;
+    color: #FFF3E4;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;

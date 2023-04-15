@@ -12,10 +12,10 @@
     include 'navbar.php'; 
     ?>
     <div class="body-container">
+        <h1>Elérhetőségeink</h1>
         <div class="infok-container">
             <div class="infok-wrapper">
                 <div class="szoveg">
-                    <h2>Elérhetőségeink:</h2>
                     <p>Telefonszám: 06702936173</p>
                     <p>Email: ujkezdet@gmail.com</p>
                     <p>Telephely: Szeged, Szőlősor 4</p>

@@ -35,7 +35,7 @@ session_start();
     <div class="body-container">
         <div class="flex-container">
             <div class="section-container">
-                <h2>Új téma</h2>
+                <h1>Új téma</h1>
                 <section>
                     <div class="topics">
                         <form action="forum.php" method="POST">
@@ -53,11 +53,11 @@ session_start();
                 </section>
             </div>
             <div class="section-container">
-                <h2>Aktuális</h2>
+                <h1>Aktuális</h1>
                 <?php include 'queries/topics_forum.php'; ?>
             </div>
             <div class="aside-container">
-                <h2>Felhasználók</h2>
+                <h1>Felhasználók</h1>
                 <aside>
                     <div class="users">
                         <?php include 'queries/users_forum.php'; ?>
