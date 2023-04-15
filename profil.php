@@ -14,7 +14,13 @@ include 'queries/delete_profil.php';
     <?php include 'header.html'; ?>
     <?php include 'navbar.php'; ?>
     <div class="body-container">
-        <h1>Üdvözöllek <?php echo $_SESSION['uname']; ?>!</h1>
+        <?php    
+            include 'queries/db_connect.php';
+            $sql = "SELECT * FROM user_info WHERE uname = '{$_SESSION["uname"]}'";
+            $res = $conn->query($sql);       
+            $row = $res->fetch_assoc();
+            echo '<h1>Üdvözöllek '. $row['first_name'] . '!</h1>'
+        ?>
         <div class="profil-container">
             <div class="profil">
                 <div class="info-container">
@@ -56,7 +62,7 @@ include 'queries/delete_profil.php';
                             <div id="delete-profil">
                                 <label style="text-align:justify"for="delete">Ha biztosan <strong>törölni</strong> szeretnéd a profilodat, akkor meg kell adnod a <strong>jelszavadat!</strong></label>
                                 <?php
-                                    if (isset($error2)) {
+                                    if (isset($siker) && $siker === FALSE) {
                                         echo $error2;
                                     }
                                 ?>
