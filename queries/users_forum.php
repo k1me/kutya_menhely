@@ -19,9 +19,7 @@ if ($res2 -> num_rows > 0) {
                         echo '<img src="img/login_avatar.png" alt="profil-avatar"  height="50" width="50" class="avatar"/>';
                     }     
                 echo '</div>';
-                echo '<div class="user-name">';
                     echo "<p>".$row["uname"]."</p>";
-                echo '</div>';
             echo '</div>';
     }
 } else {
