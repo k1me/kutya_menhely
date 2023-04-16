@@ -30,7 +30,7 @@
             echo '>Profil</a></li>';
         } else {
             echo '<li class="login"><a href="login.php "';
-            if ($page == 'login') {
+            if ($page == 'login' || $page == 'register') {
                 echo 'class="active"';
             }
             echo '>Belépés</a></li>';
