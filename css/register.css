@@ -71,9 +71,10 @@ button:hover {
     opacity: 0.8;
 }
 img.avatar {
+    border: 3px solid#483434;
+    background-color: #FFF3E4;
     width: 40%;
     border-radius: 50%;
-
 }
 form a {
     color: #192129;
