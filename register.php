@@ -42,7 +42,13 @@ if (isset($_POST["regist"])) {
         $passwd = $_POST["passwd"];
         $passwd_check = $_POST["passwd-check"];
         $date_of_birth = date('Y-m-d', strtotime($_POST["date-of-birth"]));
-
+        include 'queries/db_connect.php';
+        $presql = "SELECT * FROM users WHERE uname = '$uname'";
+        $vane = $conn->query($presql);
+        if ($vane->num_rows > 0) {
+            $errors[] = "A felhasználónév már foglalt!";
+            goto end;
+        }
         if ($passwd !== $passwd_check) {
             $errors[] = "A két jelszó nem egyezik!";
         } else {
@@ -50,27 +56,24 @@ if (isset($_POST["regist"])) {
         }
 
         if (count($errors) === 0) {
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            if ($conn->connect_error) {
-                die("Sikertelen csatlakozás: " . $conn->connect_error);
-            }
+            include 'db_connect.php';
             $sql = "INSERT INTO users(uname, passwd) 
             VALUES ('$uname', '$hashed')";
-            if ($conn->query($sql) === TRUE) {
-                $utolso_adat = $conn->insert_id;
+            if ($conn->query($sql)) {
                 
                 $sql = "INSERT INTO user_info(uname, first_name, last_name, email, date_of_birth) 
                 VALUES ('$uname', '$first_name', '$last_name', '$email', '$date_of_birth');";
-                if ($conn->query($sql) === TRUE) {
+                if ($conn->query($sql)) {
                     echo "Az adatok sikeresen hozzáadva!";
                 } else {
-                    $erros[] = "Hiba az adatok hozzáadásakor: " . $conn->error;
+                    $erros[] = "Hiba az adatok hozzáadásakor: ";
                 }
             }
             $siker = TRUE;
             header("Location: login.php");
             $conn->close();
         } else {
+            end:
             $siker = FALSE;
         }
     }
