@@ -12,9 +12,6 @@
         <li><a href="elerhetoseg.php" <?php if ($page =='elerhetoseg') {
                                     echo 'class="active"';
                                     } ?>>Elérhetőség</a></li>
-        <li><a href="ajanlo.php" <?php if ($page =='ajanlo') {
-                                    echo 'class="active"';
-                                    } ?>>Ajánló</a></li>
         <li><a href=" <?php 
         if (!isset($_SESSION['uname'])){
             echo 'login.php"';
